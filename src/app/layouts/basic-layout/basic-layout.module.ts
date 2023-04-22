@@ -7,15 +7,28 @@ import { IconDefinition } from '@ant-design/icons-angular';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import * as AllIcons from '@ant-design/icons-angular/icons';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-
+import { HeaderModule } from '../header/header.module';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { RouterModule } from '@angular/router';
 const antDesignIcons = AllIcons as {
   [key: string]: IconDefinition;
 };
-const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key]);
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
+  key => antDesignIcons[key]
+);
 
 @NgModule({
   declarations: [BasicLayoutComponent],
-  imports: [CommonModule, NzLayoutModule, NzBreadCrumbModule, NzMenuModule, NzIconModule.forChild(icons)],
+  imports: [
+    CommonModule,
+    NzLayoutModule,
+    NzBreadCrumbModule,
+    NzMenuModule,
+    NzIconModule.forChild(icons),
+    HeaderModule,
+    NzDropDownModule,
+    RouterModule,
+  ],
   exports: [BasicLayoutComponent],
 })
 export class BasicLayoutModule {}
