@@ -11,14 +11,25 @@
 }
 
 .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
   margin: 16px;
+  text-align: center;
+}
+.style_logo_opened {
+  width: 140px;
+  height: 70px;
+}
+.style_logo_closed {
+  width: 25px;
+  height: 25px;
+  transition: all 0.2s;
 }
 
 nz-header {
   background: #fff;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 nz-content {
@@ -38,6 +49,13 @@ nz-breadcrumb {
 nz-footer {
   text-align: center;
 }
-nz-layout{
+nz-layout {
   height: 100%;
+}
+
+.avatar_icon{
+  margin: 0 24px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
 }

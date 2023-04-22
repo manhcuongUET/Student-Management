@@ -1,6 +1,10 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo"></div>
+    <div class="logo">
+      <img *ngIf="!isCollapsed" class="style_logo_opened" src="../../../assets/icons/logoGW.jpg" alt="logo_greenwich">
+      <img *ngIf="isCollapsed" class="style_logo_closed" src="../../../assets/icons/icon_GW.PNG"
+        alt="logo_greenwich_closed">
+    </div>
     <ul nz-menu nzTheme="dark" [nzMode]="'inline'">
       <li nz-submenu nzTitle="User" nzIcon="user">
         <ul>
@@ -25,6 +29,18 @@
     <nz-header>
       <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
         (click)="isCollapsed = !isCollapsed"></span>
+      <div class="group_avatar">
+        <img nz-button nz-dropdown [nzDropdownMenu]="menu" class="avatar_icon"
+          src="../../../assets/icons/user-circle-solid.svg" alt="avatar_icon">
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <!-- <li nz-menu-item>Vai Trò</li> -->
+            <li nz-menu-item [routerLink]="['/auth/reset-password']" routerLinkActive="router-link-active">Đổi mật khẩu
+            </li>
+            <li nz-menu-item>Đăng xuất</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
     </nz-header>
     <nz-content>
       <nz-breadcrumb>
