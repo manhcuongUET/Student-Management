@@ -1,0 +1,67 @@
+.managementFee-page> h3{
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.row{
+    padding: 0;
+}
+.btn-add-fee{
+    color: #ffff;
+    background-color: #3B82F6;
+    padding: 8px 12px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.btn-add-fee > img{
+    width: 18px;
+    margin-right: 4px;
+}
+
+.list-fee__title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+img{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.card-fee{
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card-fee__info__amount{
+    display: flex;
+    gap: 4px;
+    font-size: 16px;
+    color: #3B82F6;
+    margin-top: 12px;
+}
+
+.card-fee__info__amount>span:first-child{
+    font-weight: 700;
+}
+
+.card-fee__info__time{
+    margin-top: 12px;
+    color: #3B82F6;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.card-fee__info__time>img{
+    width: 18px;
+}
+
+.list-fee{
+    overflow-y: auto;
+}
