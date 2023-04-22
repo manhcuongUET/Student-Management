@@ -1,0 +1,22 @@
+<div class="row card-container">
+  <div class="col-2 time-box d-flex flex-column align-items-center justify-content-center">
+    <h5>{{ eventData.date }}</h5>
+    <p class="time-box__hour">{{ eventData.time }}</p>
+  </div>
+  <div class="col-8">
+    <h3>
+      <strong>{{ eventData.title }}</strong>
+    </h3>
+    <p>
+      {{ eventData.description }}
+    </p>
+  </div>
+  <div class="col-2 card-container__btn-container">
+    <ng-container *ngIf="eventData.isJoin else notJoin">
+      <button class="btn card-container__btn">Tham gia</button>
+    </ng-container>
+    <ng-template #notJoin>
+      <button class="btn card-container__btn">Không tham gia</button>
+    </ng-template>
+  </div>
+</div>
