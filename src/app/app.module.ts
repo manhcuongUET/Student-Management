@@ -25,16 +25,14 @@ import { AuthInterceptor } from './auth/interceptor/auth.interceptor';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NzEmptyModule],
-  providers: [
-    { provide: NZ_I18N, useValue: en_US },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
+  declarations: [
+    AppComponent
   ],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
