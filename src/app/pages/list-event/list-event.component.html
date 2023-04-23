@@ -1,0 +1,7 @@
+<h2><strong>Danh sách sự kiện </strong></h2>
+<ng-container *ngFor="let event of displayedListEvent">
+  <app-event-card [eventData]="event"></app-event-card>
+</ng-container>
+<div class="paging">
+  <nz-pagination [nzPageIndex]="1" [nzTotal]="10" [nzPageSize]="itemPerPage" (nzPageIndexChange)="onPageIndexChange($event)"></nz-pagination>
+</div>

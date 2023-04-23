@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { PagesComponent } from './pages.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
+import { ListEventComponent } from './list-event/list-event.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path:'managementFee',
         component: ManagementFeeComponent
+      },
+      {
+        path: 'listEvent',
+        component: ListEventComponent
       }
     ],
   },
