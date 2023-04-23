@@ -5,6 +5,10 @@ import { PagesComponent } from './pages.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
 
+import { EmailComponent } from './email/email.component';
+import { NewEmailComponent } from './email/new-email/new-email.component';
+import { BoxEmailComponent } from './email/box-email/box-email.component';
+import { ReadEmailComponent } from './email/read-email/read-email.component';
 
 const routes: Routes = [
   {
@@ -19,13 +23,31 @@ const routes: Routes = [
       //Implement component other
 
       {
-        path:'managementFee',
-        component: ManagementFeeComponent
+        path: 'managementFee',
+        component: ManagementFeeComponent,
       },
       {
         path: 'listEvent',
-        component: ListEventComponent
-      }
+        component: ListEventComponent,
+      },
+      {
+        path: 'email',
+        component: EmailComponent,
+        children: [
+          {
+            path: 'new-email',
+            component: NewEmailComponent,
+          },
+          {
+            path: 'box-email/:slug',
+            component: BoxEmailComponent,
+          },
+          {
+            path: 'read-email/:id',
+            component: ReadEmailComponent,
+          },
+        ],
+      },
     ],
   },
 ];

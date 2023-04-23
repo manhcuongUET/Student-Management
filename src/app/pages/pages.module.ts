@@ -15,6 +15,13 @@ import { TestComponent } from './test/test.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
 import { EventCardComponent } from '../shared/components/event-card/event-card.component';
+import { EmailComponent } from './email/email.component';
+import { NewEmailComponent } from './email/new-email/new-email.component';
+import { ReadEmailComponent } from './email/read-email/read-email.component';
+import { BoxEmailComponent } from './email/box-email/box-email.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,11 @@ import { EventCardComponent } from '../shared/components/event-card/event-card.c
     TestComponent,
     ManagementFeeComponent,
     ListEventComponent,
-    EventCardComponent
+    EventCardComponent,
+    EmailComponent,
+    NewEmailComponent,
+    ReadEmailComponent,
+    BoxEmailComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +43,11 @@ import { EventCardComponent } from '../shared/components/event-card/event-card.c
     NzDropDownModule,
     NzModalModule,
     NzDatePickerModule,
-    NzPaginationModule
-  ]
+    NzPaginationModule,
+    AngularEditorModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}
