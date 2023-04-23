@@ -1,6 +1,6 @@
 <nz-layout>
   <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo">
+    <div class="logo cursor-pointer" routerLink="/">
       <img *ngIf="!isCollapsed" class="style_logo_opened" src="../../../assets/icons/logoGW.jpg" alt="logo_greenwich">
       <img *ngIf="isCollapsed" class="style_logo_closed" src="../../../assets/icons/icon_GW.PNG"
         alt="logo_greenwich_closed">
@@ -8,7 +8,7 @@
     <ul nz-menu nzTheme="dark" [nzMode]="'inline'">
       <li nz-submenu nzTitle="User" nzIcon="user">
         <ul>
-          <li nz-menu-item>Tom</li>
+          <li nz-menu-item routerLink="email/box-email/inbox">Email</li>
           <li nz-menu-item>Bill</li>
           <li nz-menu-item>Alex</li>
         </ul>

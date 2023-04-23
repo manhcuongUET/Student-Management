@@ -18,6 +18,13 @@ import { ManagementFeeComponent } from './management-fee/management-fee.componen
 import { ListEventComponent } from './list-event/list-event.component';
 import { EventCardComponent } from '../shared/components/event-card/event-card.component';
 import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
+import { EmailComponent } from './email/email.component';
+import { NewEmailComponent } from './email/new-email/new-email.component';
+import { ReadEmailComponent } from './email/read-email/read-email.component';
+import { BoxEmailComponent } from './email/box-email/box-email.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +32,12 @@ import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
     TestComponent,
     ManagementFeeComponent,
     ConfirmFeeComponent,
+    ListEventComponent,
+    EventCardComponent,
+    EmailComponent,
+    NewEmailComponent,
+    ReadEmailComponent,
+    BoxEmailComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +49,11 @@ import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
     NzDatePickerModule,
     NzPaginationModule,
     NzTableModule,
-    NzInputModule
-  ]
+    NzInputModule,
+    AngularEditorModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}
