@@ -10,6 +10,7 @@ import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
+import { FormGuard } from '../core/guards/form.guard';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
         children: [
           {
             path: 'new-email',
+            // canDeactivate: [FormGuard]
             component: NewEmailComponent,
           },
           {
