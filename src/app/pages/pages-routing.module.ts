@@ -4,6 +4,7 @@ import { TestComponent } from './test/test.component';
 import { PagesComponent } from './pages.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
+import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
 
 import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path:'feeVerification',
+        component: ConfirmFeeComponent
+      }
     ],
   },
 ];

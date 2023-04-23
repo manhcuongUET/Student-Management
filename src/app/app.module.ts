@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NotFoundComponent } from './layouts/not-found/not-found.component';
 import { AuthInterceptor } from './auth/interceptor/auth.interceptor';
+import { TableComponent } from './shared/components/event-card/table/table.component';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 // import * as AllIcons from '@ant-design/icons-angular/icons';
 
@@ -25,8 +27,8 @@ import { AuthInterceptor } from './auth/interceptor/auth.interceptor';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent, NotFoundComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NzEmptyModule],
+  declarations: [AppComponent, NotFoundComponent, TableComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NzEmptyModule, NzTableModule],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
     {

@@ -7,6 +7,8 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -15,6 +17,7 @@ import { TestComponent } from './test/test.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
 import { EventCardComponent } from '../shared/components/event-card/event-card.component';
+import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
 import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
@@ -28,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     PagesComponent,
     TestComponent,
     ManagementFeeComponent,
+    ConfirmFeeComponent,
     ListEventComponent,
     EventCardComponent,
     EmailComponent,
@@ -44,6 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     NzModalModule,
     NzDatePickerModule,
     NzPaginationModule,
+    NzTableModule,
+    NzInputModule,
     AngularEditorModule,
     FormsModule,
     HttpClientModule,
