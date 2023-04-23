@@ -15,14 +15,14 @@ import { TestComponent } from './test/test.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
 import { EventCardComponent } from '../shared/components/event-card/event-card.component';
+import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
     TestComponent,
     ManagementFeeComponent,
-    ListEventComponent,
-    EventCardComponent
+    ConfirmFeeComponent,
   ],
   imports: [
     CommonModule,
