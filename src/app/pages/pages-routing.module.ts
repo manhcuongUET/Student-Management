@@ -4,6 +4,7 @@ import { TestComponent } from './test/test.component';
 import { PagesComponent } from './pages.component';
 import { ManagementFeeComponent } from './management-fee/management-fee.component';
 import { ListEventComponent } from './list-event/list-event.component';
+import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: 'listEvent',
         component: ListEventComponent
+      },
+      {
+        path: 'confirmFee',
+        component: ConfirmFeeComponent
       }
     ],
   },

@@ -7,6 +7,8 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -32,7 +34,9 @@ import { ConfirmFeeComponent } from './confirm-fee/confirm-fee.component';
     NzDropDownModule,
     NzModalModule,
     NzDatePickerModule,
-    NzPaginationModule
+    NzPaginationModule,
+    NzTableModule,
+    NzInputModule
   ]
 })
 export class PagesModule { }
