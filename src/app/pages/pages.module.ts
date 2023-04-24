@@ -22,10 +22,9 @@ import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
-import { AngularEditorModule } from '@kolkov/angular-editor';
+import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     PagesComponent,
@@ -50,10 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
     NzPaginationModule,
     NzTableModule,
     NzInputModule,
-    AngularEditorModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    QuillModule.forRoot()
   ],
 })
 export class PagesModule {}

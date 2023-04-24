@@ -28,7 +28,15 @@ registerLocaleData(en);
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent, TableComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, NzEmptyModule, NzTableModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NzEmptyModule,
+    NzTableModule,
+  ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
     {

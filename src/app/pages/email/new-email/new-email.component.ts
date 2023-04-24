@@ -14,32 +14,18 @@ export class NewEmailComponent implements OnInit, GSafeData {
   htmlContent = '';
   newEmailForm!: FormGroup;
   initValueForm: any;
-  config: AngularEditorConfig = {
-    editable: true,
-    spellcheck: true,
-    height: 'auto',
-    minHeight: '10rem',
-    maxHeight: 'auto',
-    placeholder: 'Enter text here...',
-    translate: 'no',
-    defaultParagraphSeparator: 'p',
-    defaultFontName: 'Arial',
-    toolbarHiddenButtons: [['bold']],
-    customClasses: [
-      {
-        name: 'quote',
-        class: 'quote',
-      },
-      {
-        name: 'redText',
-        class: 'redText',
-      },
-      {
-        name: 'titleText',
-        class: 'titleText',
-        tag: 'h1',
-      },
+
+  modules = {
+    formula: true,
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['formula'],
+      ['image', 'code-block'],
     ],
+  };
+  styles = {
+    height: '10rem',
   };
 
   constructor(
@@ -89,7 +75,7 @@ export class NewEmailComponent implements OnInit, GSafeData {
           icon: 'info',
         })
         .then((confirm: any) => {
-          console.log(confirm)
+          console.log(confirm);
           if (confirm && confirm.value) {
             this.navigatorBack();
           }
