@@ -25,7 +25,7 @@ import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'ngx-quill';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -70,11 +70,11 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     NzRadioModule,
     NzTabsModule,
     NzPopoverModule,
-    NzCheckboxModule
+    NzCheckboxModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
   ],
 })
 export class PagesModule {}
