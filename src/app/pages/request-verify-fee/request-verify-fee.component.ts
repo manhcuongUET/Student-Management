@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-confirm-fee',
-  templateUrl: './confirm-fee.component.html',
-  styleUrls: ['./confirm-fee.component.css']
+  selector: 'app-request-verify-fee',
+  templateUrl: './request-verify-fee.component.html',
+  styleUrls: ['./request-verify-fee.component.css']
 })
-export class ConfirmFeeComponent {
+export class RequestVerifyFeeComponent {
   listOfData:Array<any> = [];
   deleteModal = false;
   editModal = false;
@@ -31,5 +31,4 @@ export class ConfirmFeeComponent {
   handleOkEditFee() {
     this.editModal = false;
   }
-
 }

@@ -9,6 +9,9 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -25,6 +28,10 @@ import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RequestVerifyFeeComponent } from './request-verify-fee/request-verify-fee.component';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { ListStudentComponent } from './list-student/list-student.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +45,9 @@ import { HttpClientModule } from '@angular/common/http';
     NewEmailComponent,
     ReadEmailComponent,
     BoxEmailComponent,
+    DashboardComponent,
+    RequestVerifyFeeComponent,
+    ListStudentComponent,
   ],
   imports: [
     CommonModule,
@@ -54,6 +64,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NzRadioModule,
+    NzTabsModule,
+    NzPopoverModule,
+    NzCheckboxModule
   ],
 })
 export class PagesModule {}
