@@ -64,7 +64,6 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     NzPaginationModule,
     NzTableModule,
     NzInputModule,
-    AngularEditorModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
