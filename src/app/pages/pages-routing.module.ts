@@ -10,6 +10,9 @@ import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RequestVerifyFeeComponent } from './request-verify-fee/request-verify-fee.component';
+import { ListStudentComponent } from './list-student/list-student.component';
 import { FormGuard } from '../core/guards/form.guard';
 import { ChatStudentsComponent } from './chat-students/chat-students.component';
 import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
@@ -54,8 +57,20 @@ const routes: Routes = [
         ],
       },
       {
-        path: 'feeVerification',
-        component: ConfirmFeeComponent,
+        path:'feeVerification',
+        component: ConfirmFeeComponent
+      },
+      {
+        path:'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path:'requestFeeVerify',
+        component: RequestVerifyFeeComponent
+      },
+      {
+        path: 'listStudent',
+        component: ListStudentComponent
       },
       {
         path: 'chat-students',

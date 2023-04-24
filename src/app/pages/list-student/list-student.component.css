@@ -1,3 +1,19 @@
+::ng-deep.ant-tabs-nav-list{
+    justify-content: space-around;
+    width: 100%;
+}
+h3{
+    font-weight: 600;
+    color: #656565;
+}
+::ng-deep .ant-tabs-tab{
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #7aacad;
+}
+
 .tbl-wrap{
     border: 1px solid #3fb59e;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -136,4 +152,52 @@
 .edit-status{
     display: flex;
     justify-content: center;
+}
+
+.content-wrap{
+    margin-top: 16px;
+}
+
+.mutilFilter>button>i{
+    margin-right: 4px;
+}
+
+.mutilFilter>button{
+    background: #ffff;
+    color: #808080;
+    font-weight: 600;
+    border: 1px solid #808080;
+    border-radius: 12px;
+
+}
+
+.section-title{
+    color:#656565;
+    font-weight: 700;
+    margin-bottom: 4px;
+    margin-top: 16px;
+}
+
+.section-content{
+    color: #733f4a;
+    font-weight: 550;
+}
+
+::ng-deep.ant-popover-title{
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #b96823;
+}
+
+.btn-apply{
+    background-color: #ffffff;
+    color: 	#35457c;
+    font-size: 20px;
+    border-color: #1e39a4;
+}
+
+.btn-apply:hover{
+    color: #ffffff;
+    background-color: #1e39a4;
 }

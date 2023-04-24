@@ -1,0 +1,454 @@
+<div class="list-student-page">
+    <div class="row text-center">
+        <h3>Danh sách sinh viên</h3>
+    </div>
+    <nz-tabset nzCentered>
+        <nz-tab nzTitle="Tất cả sinh viên">
+            <div class="content-wrap">
+                <div class="row fillter-wrap">
+                    <div class="col-12 col-sm-4 col-md-6 search-input">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm"
+                            aria-describedby="inputGroup-sizing-default">
+                        <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select" id="year">
+                                <option>
+                                    2021
+                                </option>
+                                <option>
+                                    2022
+                                </option>
+                                <option>
+                                    2024
+                                </option>
+                            </select>
+                            <label for="year">Năm</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select">
+                                <option value="">Kỳ 1</option>
+                                <option value="">Kỳ 2</option>
+                            </select>
+                            <label>Kỳ</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter mutilFilter">
+                            <button class="btn btn-primary" nz-button nz-popover nzPopoverTitle="Filter"
+                                [nzPopoverContent]="contentTemplate" nzPopoverPlacement="bottom" nzPopoverTrigger="click"><i
+                                    class="bi bi-funnel"></i>Filter</button>
+                            <ng-template #contentTemplate>
+                                <div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Đã xác nhận</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Trưởng phòng xác nhận hồ sơ hoàn thiện</label>
+                                            <label nz-checkbox>Sinh viên xác nhận đi học</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ hồ sơ</label>
+                                            <label nz-checkbox>Chưa đủ</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Phí</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ phí</label>
+                                            <label nz-checkbox>Chưa đủ phí</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Nguồn hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Online</label>
+                                            <label nz-checkbox>Direct</label>
+                                            <label nz-checkbox>Database</label>
+                                            <label nz-checkbox>Referral</label>
+                                            <label nz-checkbox>Internals</label>
+                                            <label nz-checkbox>Online Mass</label>
+                                            <label nz-checkbox>Other</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Trình độ Tiếng Anh</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Chưa Xếp Lớp</label>
+                                            <label nz-checkbox>Level 1</label>
+                                            <label nz-checkbox>Level 2</label>
+                                            <label nz-checkbox>Level 3</label>
+                                            <label nz-checkbox>Level 4</label>
+                                            <label nz-checkbox>Summit 1</label>
+                                            <label nz-checkbox>Summit 2</label>
+                                        </div>
+                                    </div>
+                                    <div class="footer-modal text-end mt-2">
+                                        <button class="btn btn-primary btn-apply"><i class="bi bi-check2-circle"></i></button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbl-wrap">
+                    <nz-table #rowSelectionTable nzShowPagination nzShowSizeChanger [nzData]="listOfData" class="tbl">
+                        <thead>
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th>Mã học sinh</th>
+                                <th>Tên sinh viên</th>
+                                <th>Tên tư vấn</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Link hóa đơn</th>
+                                <th class="text-center">Chuyên ngành</th>
+                                <th class="text-center">Trạng thái</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of rowSelectionTable.data, let i = index">
+                                <td class="text-center">{{i + 1}}</td>
+                                <td>123467</td>
+                                <td>Nguyễn Văn Thăng</td>
+                                <td>Phạm Thành Long</td>
+                                <td>0987654321</td>
+                                <td>ThangNguyen@gmail.com</td>
+                                <td>Link hóa đơn</td>
+                                <td class="text-center">CNTT</td>
+                                <td class="text-center">
+                                    <div class="card-status "
+                                        [ngClass]="{'card-status--notFee': i % 2 == 0, 'card-status--completeFee': i%2 != 0}">
+                                        <span>{{i % 2 == 0 ? 'Chưa nộp phí' : 'Đã nộp phí'}}</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-icon">
+                                        <a><i class="bi bi-check-square"></i></a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </div>
+            </div>
+        </nz-tab>
+        <nz-tab nzTitle="Danh sách sinh viên đủ điều kiện nhập học">
+            <div class="content-wrap">
+                <div class="row fillter-wrap">
+                    <div class="col-12 col-sm-4 col-md-6 search-input">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm"
+                            aria-describedby="inputGroup-sizing-default">
+                        <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select" id="year">
+                                <option>
+                                    2021
+                                </option>
+                                <option>
+                                    2022
+                                </option>
+                                <option>
+                                    2024
+                                </option>
+                            </select>
+                            <label for="year">Năm</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select">
+                                <option value="">Kỳ 1</option>
+                                <option value="">Kỳ 2</option>
+                            </select>
+                            <label>Kỳ</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter mutilFilter">
+                            <button class="btn btn-primary" nz-button nz-popover nzPopoverTitle="Filter"
+                                [nzPopoverContent]="contentTemplate" nzPopoverPlacement="bottom" nzPopoverTrigger="click"><i
+                                    class="bi bi-funnel"></i>Filter</button>
+                            <ng-template #contentTemplate>
+                                <div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Đã xác nhận</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Trưởng phòng xác nhận hồ sơ hoàn thiện</label>
+                                            <label nz-checkbox>Sinh viên xác nhận đi học</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ hồ sơ</label>
+                                            <label nz-checkbox>Chưa đủ</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Phí</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ phí</label>
+                                            <label nz-checkbox>Chưa đủ phí</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Nguồn hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Online</label>
+                                            <label nz-checkbox>Direct</label>
+                                            <label nz-checkbox>Database</label>
+                                            <label nz-checkbox>Referral</label>
+                                            <label nz-checkbox>Internals</label>
+                                            <label nz-checkbox>Online Mass</label>
+                                            <label nz-checkbox>Other</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Trình độ Tiếng Anh</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Chưa Xếp Lớp</label>
+                                            <label nz-checkbox>Level 1</label>
+                                            <label nz-checkbox>Level 2</label>
+                                            <label nz-checkbox>Level 3</label>
+                                            <label nz-checkbox>Level 4</label>
+                                            <label nz-checkbox>Summit 1</label>
+                                            <label nz-checkbox>Summit 2</label>
+                                        </div>
+                                    </div>
+                                    <div class="footer-modal text-end mt-2">
+                                        <button class="btn btn-primary btn-apply"><i class="bi bi-check2-circle"></i></button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbl-wrap">
+                    <nz-table #rowSelectionTable nzShowPagination nzShowSizeChanger [nzData]="listOfData" class="tbl">
+                        <thead>
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th>Mã học sinh</th>
+                                <th>Tên sinh viên</th>
+                                <th>Tên tư vấn</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Link hóa đơn</th>
+                                <th class="text-center">Chuyên ngành</th>
+                                <th class="text-center">Trạng thái</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of rowSelectionTable.data, let i = index">
+                                <td class="text-center">{{i + 1}}</td>
+                                <td>123467</td>
+                                <td>Nguyễn Văn Thăng</td>
+                                <td>Phạm Thành Long</td>
+                                <td>0987654321</td>
+                                <td>ThangNguyen@gmail.com</td>
+                                <td>Link hóa đơn</td>
+                                <td class="text-center">CNTT</td>
+                                <td class="text-center">
+                                    <div class="card-status "
+                                        [ngClass]="{'card-status--notFee': i % 2 == 0, 'card-status--completeFee': i%2 != 0}">
+                                        <span>{{i % 2 == 0 ? 'Chưa nộp phí' : 'Đã nộp phí'}}</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-icon">
+                                        <a><i class="bi bi-check-square"></i></a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </div>
+            </div>
+        </nz-tab>
+        <nz-tab nzTitle="Danh sách sinh viên hồ sơ quá hạn">
+            <div class="content-wrap">
+                <div class="row fillter-wrap">
+                    <div class="col-12 col-sm-4 col-md-6 search-input">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm"
+                            aria-describedby="inputGroup-sizing-default">
+                        <button class="btn btn-primary"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select" id="year">
+                                <option>
+                                    2021
+                                </option>
+                                <option>
+                                    2022
+                                </option>
+                                <option>
+                                    2024
+                                </option>
+                            </select>
+                            <label for="year">Năm</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2">
+                        <div class="item-fillter">
+                            <select class="form-select">
+                                <option value="">Kỳ 1</option>
+                                <option value="">Kỳ 2</option>
+                            </select>
+                            <label>Kỳ</label>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <div class="item-fillter mutilFilter">
+                            <button class="btn btn-primary" nz-button nz-popover nzPopoverTitle="Filter"
+                                [nzPopoverContent]="contentTemplate" nzPopoverPlacement="bottom" nzPopoverTrigger="click"><i
+                                    class="bi bi-funnel"></i>Filter</button>
+                            <ng-template #contentTemplate>
+                                <div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Đã xác nhận</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Trưởng phòng xác nhận hồ sơ hoàn thiện</label>
+                                            <label nz-checkbox>Sinh viên xác nhận đi học</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ hồ sơ</label>
+                                            <label nz-checkbox>Chưa đủ</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Phí</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Đủ phí</label>
+                                            <label nz-checkbox>Chưa đủ phí</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Nguồn hồ sơ</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Online</label>
+                                            <label nz-checkbox>Direct</label>
+                                            <label nz-checkbox>Database</label>
+                                            <label nz-checkbox>Referral</label>
+                                            <label nz-checkbox>Internals</label>
+                                            <label nz-checkbox>Online Mass</label>
+                                            <label nz-checkbox>Other</label>
+                                        </div>
+                                    </div>
+                                    <div class="section-fillter">
+                                        <div class = "section-title">
+                                            <span>Trình độ Tiếng Anh</span>
+                                        </div>
+                                        <div class="section-content">
+                                            <label nz-checkbox>Chưa Xếp Lớp</label>
+                                            <label nz-checkbox>Level 1</label>
+                                            <label nz-checkbox>Level 2</label>
+                                            <label nz-checkbox>Level 3</label>
+                                            <label nz-checkbox>Level 4</label>
+                                            <label nz-checkbox>Summit 1</label>
+                                            <label nz-checkbox>Summit 2</label>
+                                        </div>
+                                    </div>
+                                    <div class="footer-modal text-end mt-2">
+                                        <button class="btn btn-primary btn-apply"><i class="bi bi-check2-circle"></i></button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbl-wrap">
+                    <nz-table #rowSelectionTable nzShowPagination nzShowSizeChanger [nzData]="listOfData" class="tbl">
+                        <thead>
+                            <tr>
+                                <th class="text-center">STT</th>
+                                <th>Mã học sinh</th>
+                                <th>Tên sinh viên</th>
+                                <th>Tên tư vấn</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Link hóa đơn</th>
+                                <th class="text-center">Chuyên ngành</th>
+                                <th class="text-center">Trạng thái</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of rowSelectionTable.data, let i = index">
+                                <td class="text-center">{{i + 1}}</td>
+                                <td>123467</td>
+                                <td>Nguyễn Văn Thăng</td>
+                                <td>Phạm Thành Long</td>
+                                <td>0987654321</td>
+                                <td>ThangNguyen@gmail.com</td>
+                                <td>Link hóa đơn</td>
+                                <td class="text-center">CNTT</td>
+                                <td class="text-center">
+                                    <div class="card-status "
+                                        [ngClass]="{'card-status--notFee': i % 2 == 0, 'card-status--completeFee': i%2 != 0}">
+                                        <span>{{i % 2 == 0 ? 'Chưa nộp phí' : 'Đã nộp phí'}}</span>
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="btn-icon">
+                                        <a><i class="bi bi-check-square"></i></a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </div>
+            </div>
+        </nz-tab>
+    </nz-tabset>
+</div>

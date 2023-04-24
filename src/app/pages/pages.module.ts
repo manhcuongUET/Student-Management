@@ -9,6 +9,9 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
+import { NzPopoverModule } from 'ng-zorro-antd/popover';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -25,6 +28,11 @@ import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RequestVerifyFeeComponent } from './request-verify-fee/request-verify-fee.component';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { ListStudentComponent } from './list-student/list-student.component';
+
 import { ChatStudentsComponent } from './chat-students/chat-students.component';
 import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
 @NgModule({
@@ -39,6 +47,9 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     NewEmailComponent,
     ReadEmailComponent,
     BoxEmailComponent,
+    DashboardComponent,
+    RequestVerifyFeeComponent,
+    ListStudentComponent,
     ChatStudentsComponent,
     ChatAdmissionsComponent,
   ],
@@ -53,6 +64,13 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     NzPaginationModule,
     NzTableModule,
     NzInputModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NzRadioModule,
+    NzTabsModule,
+    NzPopoverModule,
+    NzCheckboxModule
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

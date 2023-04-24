@@ -1,42 +1,6 @@
 <div class="confirm-fee-page">
     <div class="row title-page text-center">
-        <span>Danh sách tình trạng nộp học phí của sinh viên</span>
-    </div>
-    <div class="row justify-content-center">
-        <div class="row general-info">
-            <div class="col-md-3 col-sm-3 col-12 card-info text-center">
-                <div class="title-card">
-                    <span>Sinh viên đã nộp đủ phí</span>
-                </div>
-                <div class="card-content">
-                    <span>105</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-12 card-info text-center">
-                <div class="title-card">
-                    <span>Sinh viên thiếu phí giữ chỗ</span>
-                </div>
-                <div class="card-content">
-                    <span>34</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-12 card-info text-center">
-                <div class="title-card">
-                    <span>Sinh viên thiếu phí xét tuyển</span>
-                </div>
-                <div class="card-content">
-                    <span>145</span>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-12 card-info text-center">
-                <div class="title-card">
-                    <span>Sinh viên chưa nộp phí</span>
-                </div>
-                <div class="card-content">
-                    <span>65</span>
-                </div>
-            </div>
-        </div>
+        <span>Danh sách xác nhận nộp học phí của sinh viên</span>
     </div>
     <div class="row fillter-wrap">
         <div class="col-12 col-sm-4 col-md-6 search-input">
@@ -58,6 +22,7 @@
                 </select>
                 <label for="year">Năm</label>
             </div>
+
         </div>
         <div class="col-12 col-sm-2 col-md-2">
             <div class="item-fillter">
@@ -67,6 +32,7 @@
                 </select>
                 <label>Kỳ</label>
             </div>
+
         </div>
         <div class="col-12 col-sm-3 col-md-2">
             <div class="item-fillter">
@@ -111,8 +77,7 @@
                     </td>
                     <td class="text-center">
                         <div class="btn-icon">
-                            <a (click)="deleteModal = !deleteModal"><i class="bi bi-trash3"></i></a>
-                            <a (click)="editModal = !editModal"><i class="bi bi-pencil-square"></i></a>
+                            <a (click)="deleteModal = !deleteModal"><i class="bi bi-check-square"></i></a>
                         </div>
 
                     </td>
@@ -121,23 +86,9 @@
         </nz-table>
     </div>
 </div>
-<nz-modal [(nzVisible)]="deleteModal" nzTitle="Xác nhận xóa" (nzOnCancel)="handleCancelModalDelete()"
+<nz-modal [(nzVisible)]="deleteModal" nzTitle="Xác nhận đóng phí" (nzOnCancel)="handleCancelModalDelete()"
     (nzOnOk)="handleOkDeleteFee()">
     <ng-container *nzModalContent>
-        <span>Bạn có chắc chán muốn xóa sinh viên này khỏi danh sách?</span>
-    </ng-container>
-</nz-modal>
-
-<nz-modal [(nzVisible)]="editModal" nzTitle="Cập nhật trạng thái" (nzOnCancel)="handleCancelModalEdit()"
-    (nzOnOk)="handleOkEditFee()">
-    <ng-container *nzModalContent>
-        <div class="edit-status">
-            <nz-radio-group [(ngModel)]="radioValue">
-                <label nz-radio nzValue="1"> <div class="card-status card-status--notFee">
-                    <span>Chưa nộp phí</span></div></label>
-                <label nz-radio nzValue="2"><div class="card-status card-status--completeFee">
-                    <span>Đã nộp phí</span></div></label>
-            </nz-radio-group>
-        </div>
+        <span>Xác nhận phí cho sinh viên này?</span>
     </ng-container>
 </nz-modal>
