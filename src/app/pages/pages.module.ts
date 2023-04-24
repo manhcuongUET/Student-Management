@@ -25,7 +25,7 @@ import { EmailComponent } from './email/email.component';
 import { NewEmailComponent } from './email/new-email/new-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
-import { AngularEditorModule } from '@kolkov/angular-editor';
+import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -33,6 +33,8 @@ import { RequestVerifyFeeComponent } from './request-verify-fee/request-verify-f
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { ListStudentComponent } from './list-student/list-student.component';
 
+import { ChatStudentsComponent } from './chat-students/chat-students.component';
+import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -48,6 +50,8 @@ import { ListStudentComponent } from './list-student/list-student.component';
     DashboardComponent,
     RequestVerifyFeeComponent,
     ListStudentComponent,
+    ChatStudentsComponent,
+    ChatAdmissionsComponent,
   ],
   imports: [
     CommonModule,
@@ -68,6 +72,10 @@ import { ListStudentComponent } from './list-student/list-student.component';
     NzTabsModule,
     NzPopoverModule,
     NzCheckboxModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    QuillModule.forRoot()
   ],
 })
 export class PagesModule {}
