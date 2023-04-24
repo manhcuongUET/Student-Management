@@ -6,33 +6,34 @@
         height="15px">
     </button>
   </div>
-  <div class="form_new_email" >
+  <div class="form_new_email">
     <form [formGroup]="newEmailForm">
-    <div class="new_email_to mt-2">
-      <span class="form-control">
-        <input type="text" class="form-control" formControlName="emailTo" placeholder="To" />
-        <input type="file" accept=".xlsx">
-      </span>
-    </div>
-    <div class="subject_new_email form-control mt-2">
-      <input type="text" class="form-control" formControlName="subjectEmail" placeholder="Subject" />
-    </div>
-    <div class="container_content mt-2">
-      <angular-editor formControlName="htmlContent" [config]="config"></angular-editor>
-    </div>
+      <div class="new_email_to mt-2">
+        <span class="form-control">
+          <input type="text" class="form-control" formControlName="emailTo" placeholder="To" />
+          <input type="file" accept=".xlsx">
+        </span>
+      </div>
+      <div class="subject_new_email form-control mt-2">
+        <input type="text" class="form-control" formControlName="subjectEmail" placeholder="Subject" />
+      </div>
+      <div class="container_content mt-2">
+        <quill-editor class="style_quill" [styles]="styles"  formControlName="htmlContent" placeholder="Enter text here...">
+        </quill-editor>
+      </div>
 
-    <div class="group_btn_bottom mt-2">
-      <div class="d-flex align-items-center">
-        <div class="btn-group">
-          <button type="submit" class="btn btn-primary" (click)="sendNewEmail()">Send</button>
-        </div>
-        <div class="ms-auto">
-          <button type="button" class="btn border-0 btn-sm btn-white" (click)="deleteNewEmail()">
-            <img src="../../../assets/icons/icon-trash-alt-solid.svg" alt="icon_trash" width="20px" height="20px">
-          </button>
+      <div class="group_btn_bottom mt-2">
+        <div class="d-flex align-items-center">
+          <div class="btn-group">
+            <button type="submit" class="btn btn-primary" (click)="sendNewEmail()">Send</button>
+          </div>
+          <div class="ms-auto">
+            <button type="button" class="btn border-0 btn-sm btn-white" (click)="deleteNewEmail()">
+              <img src="../../../assets/icons/icon-trash-alt-solid.svg" alt="icon_trash" width="20px" height="20px">
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
   </div>
 </div>

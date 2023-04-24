@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EMPTY, interval, take } from 'rxjs';
+import { interval, take } from 'rxjs';
 import Swal from 'sweetalert2';
 import { INotifyModel } from '../../models/notify.model';
 import {
