@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AngularEditorConfig } from '@kolkov/angular-editor';
 import { GSafeData } from 'src/app/core/models/utils/safe-data.interface';
 import { NotifyService } from 'src/app/core/services/utils/notify.service';
 

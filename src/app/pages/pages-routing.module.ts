@@ -11,6 +11,8 @@ import { NewEmailComponent } from './email/new-email/new-email.component';
 import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { ReadEmailComponent } from './email/read-email/read-email.component';
 import { FormGuard } from '../core/guards/form.guard';
+import { ChatStudentsComponent } from './chat-students/chat-students.component';
+import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
 
 const routes: Routes = [
   {
@@ -52,9 +54,17 @@ const routes: Routes = [
         ],
       },
       {
-        path:'feeVerification',
-        component: ConfirmFeeComponent
-      }
+        path: 'feeVerification',
+        component: ConfirmFeeComponent,
+      },
+      {
+        path: 'chat-students',
+        component: ChatStudentsComponent,
+      },
+      {
+        path: 'chat-admissions',
+        component: ChatAdmissionsComponent,
+      },
     ],
   },
 ];

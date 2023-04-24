@@ -12,3 +12,9 @@ export enum TypeIcon {
   Question = 'question',
 }
 export const TOKEN = 'TOKEN';
+export enum RoleNumber {
+  student,
+  accountant,
+  admissions,
+  admissionsManager
+}
