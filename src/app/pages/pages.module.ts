@@ -25,6 +25,8 @@ import { BoxEmailComponent } from './email/box-email/box-email.component';
 import { QuillModule } from 'ngx-quill'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatStudentsComponent } from './chat-students/chat-students.component';
+import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -37,6 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     NewEmailComponent,
     ReadEmailComponent,
     BoxEmailComponent,
+    ChatStudentsComponent,
+    ChatAdmissionsComponent,
   ],
   imports: [
     CommonModule,
