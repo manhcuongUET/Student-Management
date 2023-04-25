@@ -16,7 +16,6 @@ import { NzCalendarModule } from 'ng-zorro-antd/calendar';
 import { NzBadgeModule } from 'ng-zorro-antd/badge';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
 
-
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { BasicLayoutModule } from '../layouts/basic-layout/basic-layout.module';
@@ -86,7 +85,8 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     ReactiveFormsModule,
     NzCalendarModule,
     NzBadgeModule,
-    NzTimePickerModule
+    NzTimePickerModule,
+    QuillModule.forRoot(),
   ],
 })
 export class PagesModule {}
