@@ -12,6 +12,10 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzPopoverModule } from 'ng-zorro-antd/popover';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+import { NzCalendarModule } from 'ng-zorro-antd/calendar';
+import { NzBadgeModule } from 'ng-zorro-antd/badge';
+import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
+
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
@@ -35,6 +39,8 @@ import { ListStudentComponent } from './list-student/list-student.component';
 
 import { ChatStudentsComponent } from './chat-students/chat-students.component';
 import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
+import { ManagementEventListComponent } from './management-event-list/management-event-list.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -52,6 +58,8 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     ListStudentComponent,
     ChatStudentsComponent,
     ChatAdmissionsComponent,
+    ManagementEventListComponent,
+    CreateEventComponent,
   ],
   imports: [
     CommonModule,
@@ -74,7 +82,9 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    QuillModule.forRoot(),
+    NzCalendarModule,
+    NzBadgeModule,
+    NzTimePickerModule
   ],
 })
 export class PagesModule {}

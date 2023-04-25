@@ -16,6 +16,8 @@ import { ListStudentComponent } from './list-student/list-student.component';
 import { FormGuard } from '../core/guards/form.guard';
 import { ChatStudentsComponent } from './chat-students/chat-students.component';
 import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
+import { ManagementEventListComponent } from './management-event-list/management-event-list.component';
+import { CreateEventComponent } from './create-event/create-event.component';
 
 const routes: Routes = [
   {
@@ -57,20 +59,20 @@ const routes: Routes = [
         ],
       },
       {
-        path:'feeVerification',
-        component: ConfirmFeeComponent
+        path: 'feeVerification',
+        component: ConfirmFeeComponent,
       },
       {
-        path:'dashboard',
-        component: DashboardComponent
+        path: 'dashboard',
+        component: DashboardComponent,
       },
       {
-        path:'requestFeeVerify',
-        component: RequestVerifyFeeComponent
+        path: 'requestFeeVerify',
+        component: RequestVerifyFeeComponent,
       },
       {
         path: 'listStudent',
-        component: ListStudentComponent
+        component: ListStudentComponent,
       },
       {
         path: 'chat-students',
@@ -79,6 +81,14 @@ const routes: Routes = [
       {
         path: 'chat-admissions',
         component: ChatAdmissionsComponent,
+      },
+      {
+        path: 'manage-event-list',
+        component: ManagementEventListComponent,
+      },
+      {
+        path: 'create-event',
+        component: CreateEventComponent,
       },
     ],
   },
