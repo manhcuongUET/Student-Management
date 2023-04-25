@@ -1,28 +1,26 @@
 <nz-layout>
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" nzBreakpoint="lg" [nzTrigger]="null">
     <div class="logo cursor-pointer" routerLink="/">
       <img *ngIf="!isCollapsed" class="style_logo_opened" src="../../../assets/icons/logoGW.jpg" alt="logo_greenwich">
       <img *ngIf="isCollapsed" class="style_logo_closed" src="../../../assets/icons/icon_GW.PNG"
         alt="logo_greenwich_closed">
     </div>
-    <ul nz-menu nzTheme="dark" [nzMode]="'inline'">
-      <li nz-submenu nzTitle="User" nzIcon="user">
-        <ul>
+    <ul nz-menu nzTheme="dark" [nzMode]="'inline'" *ngFor="let item of listMenuByRole">
+      <ng-container *ngFor="let menu of item.permission">
+        <li nz-menu-item routerLink="{{menu.routerLink}}">
+          <!-- <ul>
           <li nz-menu-item routerLink="email/box-email/inbox">Email</li>
           <li nz-menu-item routerLink="chat-admissions">Chat</li>
           <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Team" nzIcon="team">
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
-      </li>
-      <li nz-menu-item>
+        </ul> -->
+          <span nz-icon [nzType]="menu.icon"></span>
+          <span>{{menu.screenName}}</span>
+        </li>
+        <!-- <li nz-menu-item>
         <span nz-icon nzType="file"></span>
         <span>File</span>
-      </li>
+      </li> -->
+      </ng-container>
     </ul>
   </nz-sider>
   <nz-layout>
@@ -37,16 +35,12 @@
             <!-- <li nz-menu-item>Vai Trò</li> -->
             <li nz-menu-item [routerLink]="['/auth/reset-password']" routerLinkActive="router-link-active">Đổi mật khẩu
             </li>
-            <li nz-menu-item>Đăng xuất</li>
+            <li nz-menu-item [routerLink]="['/auth/login']">Đăng xuất</li>
           </ul>
         </nz-dropdown-menu>
       </div>
     </nz-header>
     <nz-content>
-      <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
       <div class="inner-content">
         <ng-content selector="router-outlet"></ng-content>
       </div>

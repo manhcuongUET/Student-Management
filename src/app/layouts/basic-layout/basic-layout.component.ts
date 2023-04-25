@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RoleNumber } from 'src/app/core/consts/consts';
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { listMenu } from 'src/app/core/consts/guard.const';
 import { IListMenu } from 'src/app/core/models/list-menu.model';
 
 @Component({
@@ -9,30 +10,43 @@ import { IListMenu } from 'src/app/core/models/list-menu.model';
 })
 export class BasicLayoutComponent implements OnInit {
   isCollapsed = false;
-  listMenu: IListMenu[] = [
-    {
-      name: 'Email',
-      roleActivated: [
-        {
-          roleNumber: [RoleNumber.student, RoleNumber.admissionsManager],
-          routerLink: 'email/box-email/inbox',
-        },
-      ],
-    },
-    {
-      name: 'Chat',
-      roleActivated: [
-        {
-          roleNumber: RoleNumber.student,
-          routerLink: 'chat-students',
-        },
-        {
-          roleNumber: RoleNumber.admissions,
-          routerLink: 'chat-admissions',
-        },
-      ],
-    },
-  ];
+  // listMenu: IListMenu[] = [
+  //   {
+  //     name: 'Email',
+  //     roleActivated: [
+  //       {
+  //         roleNumber: [RoleNumber.student, RoleNumber.admissionsManager],
+  //         routerLink: 'email/box-email/inbox',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     name: 'Chat',
+  //     roleActivated: [
+  //       {
+  //         roleNumber: RoleNumber.student,
+  //         routerLink: 'chat-students',
+  //       },
+  //       {
+  //         roleNumber: RoleNumber.admissions,
+  //         routerLink: 'chat-admissions',
+  //       },
+  //     ],
+  //   },
+  // ];
+  roleUserCurrent!: number;
+  listMenuByRole: any;
+  // arr = [];
 
-  ngOnInit(): void {}
+  constructor(private authService: AuthService) {
+    this.authService.roleUser.subscribe(res => {
+      this.roleUserCurrent = res;
+    });
+  }
+  ngOnInit(): void {
+    console.log(this.roleUserCurrent);
+
+    this.listMenuByRole = [listMenu[this.roleUserCurrent]];
+    // console.log(this.listMenuByRole)
+  }
 }
