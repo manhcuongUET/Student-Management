@@ -1,0 +1,328 @@
+<div class="row">
+  <div class="col-md-4 d-flex flex-column align-items-center">
+    <img
+      src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+      alt="avatar"
+      width="250px" />
+      <h2><strong>Thông tin cá nhân</strong></h2>
+      <button class="btn btn-primary">Yêu cầu chỉnh sửa</button>
+      <div class="status-box mt-4 d-flex flex-column align-items-center">
+        <h3 class="mb-3">Trạng thái</h3>
+        <div class="status-card status-valid">Đầy đủ hồ sơ</div>
+        <div class="status-card status-invalid">Chưa đủ học phí</div>
+        <div class="status-card status-valid">Đã đủ phí xét tuyển</div>
+        <div class="status-card status-invalid">Học bổng</div>
+      </div>
+  </div>
+  <div class="col-md-8">
+    <form [formGroup]="profileForm">
+      <div class="form-froup" formGroupName="basicInfo">
+        <h2>Thông tin chung</h2>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="full-name" class="form-label">Họ và tên </label>
+            <input
+              id="full-name"
+              type="text"
+              formControlName="name"
+              class="form-control"
+              [disabled]="disabledEdit" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="nationality" class="form-label">Quốc tịch </label>
+            <input
+              id="nationality"
+              type="text"
+              formControlName="nationality"
+              class="form-control" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <!-- <label for="sex" class="form-label">Giới tính </label>
+            <input id="sex" type="text" formControlName="sex" class="form-control" /> -->
+            <label for="sex" class="form-label">Giới tính </label>
+            <select formControlName="sex" class="form-select">
+              <option *ngFor="let sex of sexOptions" [ngValue]="sex">
+                {{ sex.name }}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="dateOfBirth" class="form-label">Ngày sinh</label>
+            <input
+              id="dateOfBirth"
+              type="text"
+              formControlName="dateOfBirth"
+              class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label for="placeOfBirth" class="form-label">Nơi sinh </label>
+            <input
+              id="placeOfBirth"
+              type="text"
+              formControlName="placeOfBirth"
+              class="form-control" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <label for="id" class="form-label">Số cmnd</label>
+            <input id="id" type="text" formControlName="id" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label for="licienseDate" class="form-label">Ngày cấp </label>
+            <input
+              id="licienseDate"
+              type="text"
+              formControlName="licienseDate"
+              class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label for="liciensePlace" class="form-label">Nơi cấp </label>
+            <input
+              id="liciensePlace"
+              type="text"
+              formControlName="liciensePlace"
+              class="form-control" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="phoneNumber" class="form-label">Số điện thoại</label>
+            <input
+              id="phoneNumber"
+              type="text"
+              formControlName="phoneNumber"
+              class="form-control" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email </label>
+            <input id="email" type="text" formControlName="email" class="form-control" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <!-- <label for="major" class="form-label">Chuyên ngành </label>
+            <input id="major" type="text" formControlName="major" class="form-control" /> -->
+            <label for="major" class="form-label">Chuyên ngành </label>
+            <select formControlName="major" class="form-select">
+              <option *ngFor="let major of majorOptions" [ngValue]="major">
+                {{ major.name }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="linkFb" class="form-label">Link facebook </label>
+            <input id="linkFb" type="text" formControlName="linkFb" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="highSchoolInfo">
+        <h2>Trường THPT</h2>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <!-- <label for="city" class="form-label">Tỉnh/Thành phố </label>
+            <input id="city" type="text" formControlName="city" class="form-control" /> -->
+            <label for="city" class="form-label">Tỉnh/Thành phố</label>
+            <select formControlName="city" class="form-select">
+              <option *ngFor="let city of cityOptions" [ngValue]="city">
+                {{ city }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="graduateYear" class="form-label">Năm tốt nghiệp </label>
+            <input
+              id="graduateYear"
+              type="text"
+              formControlName="graduateYear"
+              class="form-control" />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="nameSchool" class="form-label">Tên trường THPT </label>
+          <input id="nameSchool" type="text" formControlName="nameSchool" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="address">
+        <h2>Địa chỉ</h2>
+
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <!-- <label for="city" class="form-label">Tỉnh/Thành phố</label>
+            <input id="city" type="text" formControlName="city" class="form-control" /> -->
+            <label for="city" class="form-label">Tỉnh/Thành phố</label>
+            <select formControlName="city" class="form-select">
+              <option *ngFor="let city of cityOptions" [ngValue]="city">
+                {{ city }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="district" class="form-label">Quận/Huyện</label>
+            <input id="district" type="text" formControlName="district" class="form-control" />
+          </div>
+
+          <div class="col-md-4">
+            <label for="ward" class="form-label">Phường/Xã</label>
+            <input id="ward" type="text" formControlName="ward" class="form-control" />
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="specificAddress" class="form-label"
+            >Địa chỉ cụ thể (Số nhà riêng, thôn, xóm)</label
+          >
+          <input
+            id="specificAddress"
+            type="text"
+            formControlName="specificAddress"
+            class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="protector">
+        <h2>Người bảo hộ</h2>
+
+        <label for="nameProSt" class="form-label">Họ và tên người bảo hộ 1</label>
+        <input id="nameProSt" type="text" formControlName="nameProSt" class="form-control" />
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="phoneProSt" class="form-label">Số điện thoại người bảo hộ 1</label>
+            <input id="phoneProSt" type="text" formControlName="phoneProSt" class="form-control" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="emailProSt" class="form-label">Email người bảo hộ 1</label>
+            <input id="emailProSt" type="text" formControlName="emailProSt" class="form-control" />
+          </div>
+        </div>
+
+        <label for="nameProNd" class="form-label">Họ và tên người bảo hộ 2</label>
+        <input id="nameProNd" type="text" formControlName="nameProNd" class="form-control" />
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="phoneProNd" class="form-label">Số điện thoại người bảo hộ 2</label>
+            <input id="phoneProNd" type="text" formControlName="phoneProNd" class="form-control" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="emailProNd" class="form-label">Email người bảo hộ 2</label>
+            <input id="emailProNd" type="text" formControlName="emailProNd" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" formGroupName="brief">
+        <h2>Hồ sơ</h2>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="file">Bằng tốt nghiệp THPT</label>
+            <input
+              formControlName="highSchoolDiploma"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="file">Giấy chứng nhận tốt nghiệp THPT tạm thời(gốc)</label>
+            <input
+              formControlName="graduationCert"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="file">Học bạ THPT</label>
+            <input
+              formControlName="highSchoolTranscript"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="file">Chứng chỉ Tiếng Anh</label>
+            <input
+              formControlName="englishCert"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="file">Giấy khai sinh</label>
+            <input
+              formControlName="birthCert"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="file">Ảnh chân dung</label>
+            <input
+              formControlName="avatar"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="file">CMND/CCCD</label>
+            <input
+              formControlName="idCard"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="file">Các chứng chỉ, giấy tờ khác(nếu có)</label>
+            <input
+              formControlName="otherDocuments"
+              id="file"
+              type="file"
+              class="form-control"
+              (change)="onFileChange($event)" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

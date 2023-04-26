@@ -3,5 +3,9 @@
   <app-event-card [eventData]="event"></app-event-card>
 </ng-container>
 <div class="paging">
-  <nz-pagination [nzPageIndex]="1" [nzTotal]="10" [nzPageSize]="itemPerPage" (nzPageIndexChange)="onPageIndexChange($event)"></nz-pagination>
+  <nz-pagination
+    [nzPageIndex]="1"
+    [nzTotal]="10"
+    [nzPageSize]="itemPerPage"
+    (nzPageIndexChange)="onPageIndexChange($event)"></nz-pagination>
 </div>
