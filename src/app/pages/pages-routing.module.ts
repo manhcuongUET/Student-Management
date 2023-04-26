@@ -21,6 +21,7 @@ import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { ManageAdmissionComponent } from './manage-admission/manage-admission.component';
 
 const routes: Routes = [
   {
@@ -104,6 +105,10 @@ const routes: Routes = [
       {
         path:'profile-account',
         component: ProfileAccountComponent
+      },
+      {
+        path: 'manage-admission',
+        component: ManageAdmissionComponent
       }
     ],
   },
