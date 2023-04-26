@@ -46,6 +46,12 @@ export const listMenu = [
         routerLink: 'requestFeeVerify',
         icon: 'check-circle',
       },
+      {
+        //aplication
+        screenName: 'Hồ sơ',
+        routerLink: 'profile-account',
+        icon: 'profile',
+      },
     ],
     defaultScreen: '/pages/feeVerification',
   },
@@ -65,7 +71,7 @@ export const listMenu = [
       {
         //aplication
         screenName: 'Hồ sơ',
-        routerLink: 'profile',
+        routerLink: 'profile-account',
         icon: 'profile',
       },
       {
@@ -101,13 +107,18 @@ export const listMenu = [
         icon: 'unordered-list',
       },
       {
+        screenName: 'Danh sách admission',
+        routerLink: 'manage-admission',
+        icon: 'unordered-list',
+      },
+      {
         screenName: 'Tạo Sự kiện',
         routerLink: 'create-event',
         icon: 'appstore',
       },
       {
         screenName: 'Hồ sơ',
-        routerLink: 'profile',
+        routerLink: 'profile-account',
         icon: 'profile',
       },
       {

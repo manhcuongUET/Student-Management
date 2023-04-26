@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-3 col-md-2">
-        <button class="btn btn-primary">Thêm admission</button>
+        <button class="btn btn-primary" (click)="addModal = true">Thêm admission</button>
       </div>
     </div>
     <div class="tbl-wrap">
@@ -82,24 +82,102 @@
 
   <nz-modal
     [(nzVisible)]="editModal"
-    nzTitle="Cập nhật trạng thái"
+    nzTitle="Cập nhật thông tin"
     (nzOnCancel)="handleCancelModalEdit()"
     (nzOnOk)="handleOkEditFee()">
     <ng-container *nzModalContent>
-      <div class="edit-status">
-        Chỉnh sửa Admisstion
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Họ và tên</label>
+          <input
+            type="text"
+            class="form-control"
+            value="Vũ Văn Đô"
+            placeholder="Họ và tên"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>ID</label>
+          <input
+            type="text"
+            value="0183834"
+            class="form-control"
+            placeholder="ID"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Email</label>
+          <input
+            type="text"
+            value="do@gmail.com"
+            class="form-control"
+            placeholder="Email"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Số điện thoại</label>
+          <input
+            type="text"
+            value="09842632823"
+            class="form-control"
+            placeholder="Số điện thoại"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
       </div>
     </ng-container>
   </nz-modal>
 
   <nz-modal
     [(nzVisible)]="addModal"
-    nzTitle="Cập nhật trạng thái"
+    nzTitle="Thêm admission"
     (nzOnCancel)="handleCancelAddAdmission()"
     (nzOnOk)="handleOkAddAdmission()">
     <ng-container *nzModalContent>
-      <div class="edit-status">
-        Thêm Admisstion
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Họ và tên</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Họ và tên"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>ID</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="ID"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Email</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="item-input">
+          <label>Số điện thoại</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Số điện thoại"
+            aria-describedby="inputGroup-sizing-default" />
+        </div>
       </div>
     </ng-container>
   </nz-modal>
