@@ -128,7 +128,7 @@
                             <tr *ngFor="let data of rowSelectionTable.data, let i = index">
                                 <td class="text-center">{{i + 1}}</td>
                                 <td>123467</td>
-                                <td>Nguyễn Văn Thăng</td>
+                                <td (click)="showProfile()" role="button">Nguyễn Văn Thăng</td>
                                 <td>Phạm Thành Long</td>
                                 <td>0987654321</td>
                                 <td>ThangNguyen@gmail.com</td>
