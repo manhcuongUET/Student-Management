@@ -1,4 +1,4 @@
-import { RoleNumber } from "./consts";
+import { RoleNumber } from './consts';
 
 export const CURRENT_USER = 'currentUser';
 export const SECRET_KEY = 'Student_Management_CAT@2023$';
@@ -14,7 +14,7 @@ export const listMenu = [
       {
         screenName: 'Sự kiện',
         routerLink: 'listEvent',
-        icon: '',
+        icon: 'schedule',
       },
       {
         screenName: 'Liên hệ tư vấn tuyển sinh',
@@ -26,6 +26,7 @@ export const listMenu = [
       //   routerLink: ''
       // },
     ],
+    defaultScreen: '/pages/profile',
   },
   {
     roleNumber: RoleNumber.accountant,
@@ -33,19 +34,20 @@ export const listMenu = [
       {
         screenName: 'Xác minh phí',
         routerLink: 'feeVerification',
-        icon: '',
+        icon: 'dollar-circle',
       },
       {
         screenName: 'Quản lý các loại phí',
         routerLink: 'managementFee',
-        icon: '',
+        icon: 'file-text',
       },
       {
         screenName: 'Yêu cầu xác minh phí',
         routerLink: 'requestFeeVerify',
-        icon: '',
+        icon: 'check-circle',
       },
     ],
+    defaultScreen: '/pages/feeVerification',
   },
   {
     roleNumber: RoleNumber.admissions,
@@ -53,12 +55,12 @@ export const listMenu = [
       {
         screenName: 'Danh sách sinh viên',
         routerLink: 'listStudent',
-        icon: '',
+        icon: 'unordered-list',
       },
       {
         screenName: 'Sự kiện',
         routerLink: 'manage-event-list',
-        icon: '',
+        icon: 'schedule',
       },
       {
         //aplication
@@ -74,15 +76,16 @@ export const listMenu = [
       {
         screenName: 'Tin nhắn',
         routerLink: 'chat-admissions',
-        icon: '',
+        icon: 'wechat',
       },
       {
         type: 'menu',
         screenName: 'Tạo tài khoản',
         routerLink: 'createAccount',
-        icon: '',
+        icon: 'user-add',
       },
     ],
+    defaultScreen: '/pages/dashboard',
   },
   {
     roleNumber: RoleNumber.admissionsManager,
@@ -90,7 +93,7 @@ export const listMenu = [
       {
         screenName: 'Dashboard',
         routerLink: 'dashboard',
-        icon: '',
+        icon: 'apartment',
       },
       {
         screenName: 'Danh sách sinh viên',
@@ -123,5 +126,6 @@ export const listMenu = [
         icon: 'user-add',
       },
     ],
+    defaultScreen: '/pages/dashboard',
   },
 ];

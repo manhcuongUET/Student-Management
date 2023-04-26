@@ -7,7 +7,7 @@
     </div>
     <ul nz-menu nzTheme="dark" [nzMode]="'inline'" *ngFor="let item of listMenuByRole">
       <ng-container *ngFor="let menu of item.permission">
-        <li nz-menu-item routerLink="{{menu.routerLink}}">
+        <li nz-menu-item routerLink="{{menu.routerLink}}" routerLinkActive="style_item_menu">
           <!-- <ul>
           <li nz-menu-item routerLink="email/box-email/inbox">Email</li>
           <li nz-menu-item routerLink="chat-admissions">Chat</li>
