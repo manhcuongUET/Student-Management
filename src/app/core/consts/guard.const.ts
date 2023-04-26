@@ -19,7 +19,7 @@ export const listMenu = [
       {
         screenName: 'Liên hệ tư vấn tuyển sinh',
         routerLink: 'chat-students',
-        icon: '',
+        icon: 'phone',
       },
       // {
       //   screenName: '',  card status
@@ -79,7 +79,7 @@ export const listMenu = [
       {
         type: 'menu',
         screenName: 'Tạo tài khoản',
-        routerLink: '',
+        routerLink: 'createAccount',
         icon: '',
       },
     ],
@@ -119,7 +119,7 @@ export const listMenu = [
       },
       {
         screenName: 'Tạo tài khoản',
-        routerLink: '',
+        routerLink: 'createAccount',
         icon: 'user-add',
       },
     ],

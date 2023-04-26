@@ -20,6 +20,7 @@ import { ManagementEventListComponent } from './management-event-list/management
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
+      },
+      {
+        path: 'createAccount',
+        component: CreateAccountComponent
       },
       {
         path: 'email',
