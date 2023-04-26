@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { listMenu } from 'src/app/core/consts/guard.const';
 import { IListMenu } from 'src/app/core/models/list-menu.model';
@@ -38,15 +39,14 @@ export class BasicLayoutComponent implements OnInit {
   listMenuByRole: any;
   // arr = [];
 
-  constructor(private authService: AuthService) {
+  constructor(public router: Router, private authService: AuthService) {
     this.authService.roleUser.subscribe(res => {
       this.roleUserCurrent = res;
     });
   }
   ngOnInit(): void {
-    console.log(this.roleUserCurrent);
-
+    // console.log(this.roleUserCurrent);
     this.listMenuByRole = [listMenu[this.roleUserCurrent]];
-    // console.log(this.listMenuByRole)
+    // this.router.navigateByUrl(listMenu[this.roleUserCurrent].defaultScreen);
   }
 }

@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class AuthService {
   roleUser: Observable<number>;
   //role-number
-  roleUserSubject: BehaviorSubject<number> = new BehaviorSubject<number>(3);
+  roleUserSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
   constructor() {
     this.roleUser = this.roleUserSubject.asObservable();
