@@ -19,6 +19,7 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
 import { ManagementEventListComponent } from './management-event-list/management-event-list.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
       {
         path: 'listEvent',
         component: ListEventComponent,
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
       },
       {
         path: 'email',

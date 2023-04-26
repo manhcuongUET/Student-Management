@@ -35,6 +35,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RequestVerifyFeeComponent } from './request-verify-fee/request-verify-fee.component';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 import { ListStudentComponent } from './list-student/list-student.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { ChatStudentsComponent } from './chat-students/chat-students.component';
 import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.component';
@@ -53,6 +54,7 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     NewEmailComponent,
     ReadEmailComponent,
     BoxEmailComponent,
+<<<<<<< HEAD
     DashboardComponent,
     RequestVerifyFeeComponent,
     ListStudentComponent,
@@ -61,6 +63,9 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     ManagementEventListComponent,
     CreateEventComponent,
     ProfileAccountComponent,
+=======
+    ProfileComponent,
+>>>>>>> b93e340 (create function profile)
   ],
   imports: [
     CommonModule,
