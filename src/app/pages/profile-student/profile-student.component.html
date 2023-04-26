@@ -4,7 +4,10 @@
       src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
       alt="avatar"
       width="250px" />
-    <button class="btn btn-primary" (click)="handleEdit()">Chỉnh sửa</button>
+    <div class="d-flex">
+      <button class="btn btn-primary" (click)="handleEdit()">Chỉnh sửa</button>
+      <button class="btn btn-success ms-2">Yêu cầu xác minh tài chính</button>
+    </div>
     <div class="card-status">
       <h3>Trạng thái</h3>
       <p class="status-invalid">Chưa duyệt học bổng</p>
@@ -33,7 +36,12 @@
 
       <div class="d-flex justify-content-end">
         <button class="btn btn-warning">Chỉnh sửa</button>
-        <button class="btn btn-primary ms-2">Gửi Trưởng Phòng</button>
+        <ng-container *ngIf="roleUserCurrent === 2; else role3">
+          <button class="btn btn-primary ms-2">Gửi Trưởng Phòng</button>
+        </ng-container>
+        <ng-template #role3>
+          <button class="btn btn-primary ms-2">Phê duyệt</button>
+        </ng-template>
       </div>
     </div>
   </div>
@@ -342,5 +350,9 @@
         </div>
       </div>
     </form>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-success">Xuất file PDF</button>
+      <button class="btn btn-primary ms-3">Save</button>
+    </div>
   </div>
 </div>

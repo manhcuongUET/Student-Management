@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-profile-student',
@@ -122,7 +123,12 @@ export class ProfileStudentComponent {
       otherDocuments: '',
     }),
   });
-  constructor(private fb: FormBuilder) {}
+  roleUserCurrent!: number;
+  constructor(private fb: FormBuilder,private authService: AuthService) {
+    this.authService.roleUser.subscribe(res => {
+      this.roleUserCurrent = res;
+    });
+  }
 
   ngOnInit(): void {
     this.profileForm.disable();

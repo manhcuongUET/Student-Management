@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -124,11 +124,21 @@ export class ProfileComponent implements OnInit {
       otherDocuments: '',
     }),
   });
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private renderer2: Renderer2) {}
 
   ngOnInit(): void {
-    this.profileForm.disable();
+    // this.profileForm.disable();
   }
 
-  onFileChange(event: any) {}
+  onFileChange(event: any) {
+    // console.log(event.srcElement.files[0].name);
+    const parent = event.target.parentNode;
+    // console.log(event.target.parentNode);
+    const test = this.renderer2.createElement('img');
+    this.renderer2.setProperty(test, 'src', URL.createObjectURL(event.srcElement.files[0]));
+    this.renderer2.setStyle(test, 'height', '50px');
+    this.renderer2.insertBefore(parent,test, event.target);
+    // console.log(test);
+
+  }
 }
