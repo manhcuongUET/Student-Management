@@ -54,7 +54,6 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     NewEmailComponent,
     ReadEmailComponent,
     BoxEmailComponent,
-<<<<<<< HEAD
     DashboardComponent,
     RequestVerifyFeeComponent,
     ListStudentComponent,
@@ -63,9 +62,7 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     ManagementEventListComponent,
     CreateEventComponent,
     ProfileAccountComponent,
-=======
     ProfileComponent,
->>>>>>> b93e340 (create function profile)
   ],
   imports: [
     CommonModule,

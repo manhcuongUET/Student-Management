@@ -8,7 +8,7 @@ export const listMenu = [
     permission: [
       {
         screenName: 'Hồ sơ',
-        routerLink: '',
+        routerLink: 'profile',
         icon: 'profile',
       },
       {
@@ -63,7 +63,7 @@ export const listMenu = [
       {
         //aplication
         screenName: 'Hồ sơ',
-        routerLink: '',
+        routerLink: 'profile',
         icon: 'profile',
       },
       {
@@ -104,7 +104,7 @@ export const listMenu = [
       },
       {
         screenName: 'Hồ sơ',
-        routerLink: '',
+        routerLink: 'profile',
         icon: 'profile',
       },
       {

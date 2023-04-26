@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormBuilder } from '@angular/forms';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
   sexOptions = [{ name: 'Nam' }, { name: 'Nữ' }];
 
   majorOptions = [{ name: 'Quản trị marketing' }, { name: 'Kiểm toán' }, { name: 'Kế toán' }];
@@ -125,6 +125,10 @@ export class ProfileComponent {
     }),
   });
   constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.profileForm.disable();
+  }
 
   onFileChange(event: any) {}
 }
