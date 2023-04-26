@@ -42,6 +42,7 @@ import { ChatAdmissionsComponent } from './chat-admissions/chat-admissions.compo
 import { ManagementEventListComponent } from './management-event-list/management-event-list.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -63,6 +64,7 @@ import { ProfileAccountComponent } from './profile-account/profile-account.compo
     CreateEventComponent,
     ProfileAccountComponent,
     ProfileComponent,
+    CreateAccountComponent,
   ],
   imports: [
     CommonModule,
