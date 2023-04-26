@@ -43,6 +43,7 @@ import { ManagementEventListComponent } from './management-event-list/management
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { ManageAdmissionComponent } from './manage-admission/manage-admission.component';
 import { ProfileStudentComponent } from './profile-student/profile-student.component';
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { ProfileStudentComponent } from './profile-student/profile-student.compo
     ProfileAccountComponent,
     ProfileComponent,
     CreateAccountComponent,
+    ManageAdmissionComponent,
     ProfileStudentComponent,
   ],
   imports: [
