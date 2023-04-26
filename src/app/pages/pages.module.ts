@@ -43,6 +43,7 @@ import { ManagementEventListComponent } from './management-event-list/management
 import { CreateEventComponent } from './create-event/create-event.component';
 import { ProfileAccountComponent } from './profile-account/profile-account.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { ProfileStudentComponent } from './profile-student/profile-student.component';
 @NgModule({
   declarations: [
     PagesComponent,
@@ -65,6 +66,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     ProfileAccountComponent,
     ProfileComponent,
     CreateAccountComponent,
+    ProfileStudentComponent,
   ],
   imports: [
     CommonModule,
